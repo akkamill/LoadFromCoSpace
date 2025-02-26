@@ -1,4 +1,4 @@
-package org.example;
+package org.example.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,7 +36,7 @@ public class CustomClassLoader extends ClassLoader {
         return data;
     }
 
-    public File getRCustomResource(String resourceName) {
+    public File getCustomResource(String resourceName) {
         Path resourcePathObj = Paths.get(resourcePath + "\\" + resourceName);
         File resourceFile = resourcePathObj.toFile();
         return resourceFile.exists() ? resourceFile : null;
